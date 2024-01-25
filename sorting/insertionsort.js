@@ -1,8 +1,6 @@
 const arr=[5,2,4,8,0 ]
 
 const insertion=(arr)=>{
-    let key
-    let j
     for(let i=1;i<arr.length;i++){
         key=arr[i]
         j=i-1

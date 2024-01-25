@@ -1,9 +1,11 @@
-const array=[0,-90,0,88,2]
+const array=[0,88,1,-1]
 
 const quick=(arr)=>{
+
     if(arr.length<2){
         return arr
     }
+
     let pivot=arr[arr.length-1]
     let leftArray=[]
     let rightArray=[]
@@ -14,7 +16,9 @@ const quick=(arr)=>{
             rightArray.push(arr[i])
         }
     }
+
     return [...quick(leftArray),pivot,...quick(rightArray)]
 }
 
-console.log(quick(array))
+res=quick(array)
+console.log(res);

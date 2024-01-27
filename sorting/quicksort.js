@@ -18,3 +18,5 @@ const quick=(arr)=>{
 }
 
 console.log(quick(array))
+
+// output:[ -90, 0, 0, 2, 88 ]

@@ -13,7 +13,9 @@ const bubble=(arr)=>{
     }
     return arr
 }
-
 console.log(arr);
 bubble(arr);
 console.log(arr);
+
+// output:[ 5, 8, 1, 4, 44, 1 ]
+// [ 1, 1, 4, 5, 8, 44 ]

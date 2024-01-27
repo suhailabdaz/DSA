@@ -1,46 +1,16 @@
-class Stack{
+class stack{
     constructor(){
-        this.array=[]
-        this.size=0
+        this.q1=[]
+        this.q2=[]
     }
-
-
     push(value){
-        this.array[this.size]=value
-        this.size ++
-    }
-    pop(){
-        delete this.array[this.size]
-    }
+        this.q1.push(value)
 
-    isempty(){
-        return this.array.length==0
-    }
+        if(this.q2.legnth>0){
+            this.q1.push(this.q2.slice)
+        }
 
-    getsize(){
-        return this.array.length
-    }
 
-    peek(){
-        return this.array[this.array.length-1]
-    }
-
-    print(){
-        return this.array
-    }
-    clear(){
-        this.array=[]
+        [this.q1,this.q2]=[this.q2,this.q1]
     }
 }
-
-const stt=new Stack
-
-stt.push(2)
-res=stt.peek()
-console.log(res);
-stt.pop()
-hai=stt.isempty()
-console.log(hai);
-stt.push(8)
-ley=stt.print()
-console.log(ley);

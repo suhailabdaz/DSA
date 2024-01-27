@@ -16,3 +16,7 @@ const insertion=(arr)=>{
 console.log(arr);
 insertion(arr)
 console.log(arr);
+
+
+// output:[ 5, 2, 4, 8, 0 ]
+// [ 0, 2, 4, 5, 8 ]

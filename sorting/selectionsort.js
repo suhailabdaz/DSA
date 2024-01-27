@@ -15,3 +15,6 @@ const selection=(arr)=>{
 console.log(arr);
 selection(arr)
 console.log(arr);
+
+// output:[ 1, 4, 0, 9, -1 ]
+// [ -1, 0, 1, 4, 9 ]

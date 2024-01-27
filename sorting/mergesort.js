@@ -23,5 +23,6 @@ const merge = (leftArray, rightArray) => {
 
     return [...sortedArray, ...leftArray, ...rightArray];
 }
-
 console.log(mergesort(array));
+
+// output:[ -67, 0, 1, 1, 3, 8 ]

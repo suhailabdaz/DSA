@@ -43,12 +43,14 @@ clear(){
 const stack=new Stack
 
 stack.push(12)
-// stack.push(-1)
-// stack.push(33)
-// stack.push(122)
-// stack.pop()
-// stack.printStack()
-// stack.iempty()
-// stack.getSize()
-// stack.peek()
+stack.push(-1)
+stack.push(33)
+stack.push(122)
+stack.pop()
+stack.printStack()
+stack.iempty()
+stack.getSize()
+stack.peek()
 stack.getmin()
+
+

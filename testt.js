@@ -1,29 +1,30 @@
-const y ="{{()}[]}"
-
-
-const valid=(s)=>{
-    let stack=[]
-
-
-    let char={
-        "(":")",
-        "{":"}",
-        "[":"]"
+class stack{
+    constructor(){
+        this.stack=[]
+        this.top=null
     }
 
-    for(let i=0;i<s.length;i++){
-        ch=s[i]
-        if(char[ch]){
-            stack.push(s[i])
-        }else{
-            rem=stack.pop()
-            if(ch!==char[rem]){
-                return false
-            }
-        }
+    isEmpty(){
+        return this.stack.length==0
     }
-    return stack.length==0
 
+    push(value){
+        this.stack.push(value)
+           }
+
+    pop(){
+        this.stack.pop()
+    }
+
+    peek(){
+        return this.stack[this.stack.length-1]
+    }
 }
 
-console.log(valid(y));
+const stac=new stack
+
+stac.push(12)
+stac.pop()
+
+stac.push(8)
+console.log(stac.peek());

@@ -1,0 +1,5 @@
+class parenthesisStack{
+    constructor(){
+        this.
+    }
+}

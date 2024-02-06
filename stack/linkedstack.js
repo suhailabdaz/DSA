@@ -2,6 +2,7 @@ class Node{
     constructor(value){
         this.value=value
         this.next=null
+        this.prime=[]
     }
 }
 
@@ -19,21 +20,36 @@ class stack{
             node.next=this.top
             this.top=node
         }
+
+       
     }
 
     pop(){
     this.top=this.top.next
+            
         }
 
-        peek(){
-            return this.top.value
+
+    reverse(current){
+        if(current ==null&& current.next==null){
+            return current
         }
+        return this.reverse(current.next)
+    }
+    head(){
+        return this.head
+    }
+    
 
 
 }
 
 const st=new stack
 
+st.push(1)
 st.push(2)
-res=st.peek()
+st.push(3)
+re=st.head()
+
+res=st.reverse(re)
 console.log(res);

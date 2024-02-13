@@ -27,7 +27,7 @@ class CircularQueue {
         } else {
             this.rear = (this.rear + 1) % this.capacity;
         }
-
+        
         this.queue[this.rear] = item;
         this.size++;
     }

@@ -1,81 +1,41 @@
-class Node{
+class treenode{
     constructor(value){
         this.value=value
-        this.next=null
+        this.left=null
+        this.right=null
     }
 }
 
-class stack{
+class bst{
     constructor(){
-        this.stack=[]
-        this.top=null
+        this.root=null
     }
 
-    push(value){
-        const newnode=new Node(value)
-        if(!this.top){
-            this.top=newnode
+    insert(value,root=this.root){
+        const newnode=new treenode(value)
+        if(!this.root){
+            this.root=newnode
         }else{
-            newnode.next=this.top
-            this.top=newnode
+            if(value<root.value){
+                if(!root.left){
+                    root.left=newnode
+                }else{
+                    this.insert(value,root.left)
+                }
+            }else{
+                if(!root.right){
+                    root.right=newnode
+                }else{
+                    this.insert(value,root.right)
+                }
+            }
         }
     }
 
-    pop(){
-        this.top=this.top.next
+    secondmin(root=this.root)
+{
+    if(root.left){
+        this.secondmin(root.left)
+        return root.value
     }
-
-    peek(){
-        return this.top.value
-    }
-
-    reverse(){
-        this.reverseuntil(this.top)
-    }
-
-    reverseuntil(current,prev=null){
-        if(!current){
-            return current
-        }
-        let next = current.next
-        current.next = prev
-        return this.reverseuntil(next,current)
-    }
-}
-const isprime=(num)=>{
-    if(num<=1){
-        return false
-    }
-    for(let i=2;i<=Math.sqrt(num);i++){
-        if(num % i ==0){
-            return false
-        }
-    }
-    return true
-
-
-}
-
-const printPrimes=(newstack)=>{
-    let current=newstack.top
-    let res=""
-    while(current){
-        if(isprime(current.value)){
-            res=res+current.value+" "
-        }
-        current=current.next
-    }
-
-    console.log(res)
-}
-
-const stackop=new stack()
-
-stackop.push(5)
-stackop.push(8)
-stackop.push(6)
-stackop.push(3)
-printPrimes(stackop)
-stackop.reverse(stackop.top)
-console.log(stackop.peek()); 
-
+}}

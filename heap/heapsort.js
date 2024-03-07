@@ -23,14 +23,14 @@ const heapsort=(arr)=>{
         }
     }
 
-    for(let i=arr.length-1;i<=0;i--){
+    for(let i=arr.length-1;i>0;i--){
         [arr[0],arr[i]]=[arr[i],arr[0]]
         maxhepify(0,arr,i)
     }
     return arr
 }
 
-arr=[2,0,34,9,-1]
+arr=[2,0,34,9,-1,90]
 
 const res=heapsort(arr)
 

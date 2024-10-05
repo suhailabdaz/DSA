@@ -8,7 +8,6 @@ class minheap{
         this.heap.push(value)
         this.shiftup(this.heap.length-1)
     }
-
     shiftup(index){
         let currentvalue=this.heap[index]
         let parentindex=Math.floor((index-1)/2);
@@ -18,7 +17,6 @@ class minheap{
             this.heap[index]=parentvalue
             this.shiftup(parentindex)
         }
-
     }
 }
 

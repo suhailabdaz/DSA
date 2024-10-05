@@ -11,18 +11,18 @@ class LinkedList{
         this.size = 0
     }
 
-   isEmpty(){
+    isEmpty(){
     return this.size==0
-   }
+    }
 
-   printList(){
+    printList(){
     let current=this.head
     while(current!==null){
         console.log(current.value);
         current=current.next
     }
-   }
-   prepend(value){
+    }
+    prepend(value){
     let node = new Node(value)
     if(this.isEmpty()){
         this.head=node
@@ -32,9 +32,9 @@ class LinkedList{
         this.head= node
     }
     this.size ++
-   }
+    }
 
-   append(value){
+    append(value){
     let node = new Node(value)
     if(this.isEmpty()){
         this.head=node

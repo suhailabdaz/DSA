@@ -7,8 +7,8 @@ const heapsort=(arr)=>{
         maxhepify(i,arr,arr.length-1)
     }
     function maxhepify(index,arr,n){
-        let leftIndex=2*index+1
-        let rightIndex=2*index+2
+        let leftIndex = 2*index+1
+        let rightIndex = 2*index+2
         let endindex=n
         let indextoshift=index
         if(leftIndex<=endindex && arr[leftIndex]>arr[indextoshift]){

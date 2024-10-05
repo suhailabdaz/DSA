@@ -7,7 +7,7 @@ class queue{
     }
 
     enqueue(value){
-       this.items.push(value)
+        this.items.push(value)
     }
     dequeue(){
         this.items.shift()
